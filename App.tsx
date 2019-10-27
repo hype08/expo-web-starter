@@ -1,10 +1,10 @@
-import React from "react";
-import styled, { ThemeProvider } from "styled-components";
+import React from 'react';
+import styled, { ThemeProvider } from 'styled-components/native';
 
-import theme from "./src/utils/theme";
+import theme from './src/utils/theme';
 
-const App = () => {
-  const name: string = "Henry";
+const App: React.FC = () => {
+  const name = 'Henry';
 
   return (
     <ThemeProvider theme={theme}>
@@ -22,13 +22,9 @@ const Container = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
-  background-color: ${props => props.theme.colors.whiteColor};
+  background-color: #f0f3f5;
 `;
 
-const Title = styled.Text`
-  color: ${props => props.theme.colors.greyColor};
-`;
+const Title = styled.Text``;
 
-const Name = styled.Text`
-  color: ${props => props.theme.colors.darkBlueColor};
-`;
+const Name = styled.Text``;
