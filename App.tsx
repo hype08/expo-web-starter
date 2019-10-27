@@ -1,18 +1,16 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components/native';
+import styled from 'styled-components/native';
 
-import theme from './src/utils/theme';
+import { whiteColor, lightGrey, darkBlue } from './src/utils/Styles';
 
 const App: React.FC = () => {
   const name = 'Henry';
 
   return (
-    <ThemeProvider theme={theme}>
-      <Container>
-        <Title>Hello,</Title>
-        <Name>{`${name}`}</Name>
-      </Container>
-    </ThemeProvider>
+    <Container>
+      <Title>Hello,</Title>
+      <Name>{`${name}`}</Name>
+    </Container>
   );
 };
 
@@ -22,9 +20,13 @@ const Container = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
-  background-color: #f0f3f5;
+  background-color: ${whiteColor};
 `;
 
-const Title = styled.Text``;
+const Title = styled.Text`
+  color: ${lightGrey};
+`;
 
-const Name = styled.Text``;
+const Name = styled.Text`
+  color: ${darkBlue};
+`;
