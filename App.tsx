@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components/native';
-
 import { ApolloProvider } from 'react-apollo';
 import ApolloClient, { gql } from 'apollo-boost';
 import { theme } from './src/utils/theme';
