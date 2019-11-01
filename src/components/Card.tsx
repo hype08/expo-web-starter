@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { ThemeProvider } from 'styled-components/native';
+import styled from 'styled-components/native';
 import { theme } from '../../src/utils/theme';
 
 interface Props {
