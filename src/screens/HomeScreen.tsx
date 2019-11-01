@@ -8,16 +8,19 @@ const HomeScreen: React.FC = () => {
   return (
     <Container>
       <Card title="HomeScreen" />
-      <RightTouch>
+      <RightTouch
+        style={{
+          position: 'absolute',
+          top: 120,
+          left: '50%',
+          marginLeft: -22,
+          zIndex: 1,
+        }}
+      >
         <Nav>
           <Icon name="ios-arrow-forward" size={20} color="#546bfb" />
         </Nav>
       </RightTouch>
-      <LeftTouch>
-        <Nav>
-          <Icon name="ios-arrow-back" size={20} color="#546bfb" />
-        </Nav>
-      </LeftTouch>
     </Container>
   );
 };
@@ -36,13 +39,10 @@ const Icon = styled(Ionicons)``;
 const LeftTouch = styled.TouchableOpacity`
   position: absolute;
   top: 560;
-  left: 25%;
   z-index: 1;
 `;
 
-const RightTouch = styled(LeftTouch)`
-  left: 55%;
-`;
+const RightTouch = styled(LeftTouch)``;
 
 const Nav = styled.View`
   margin: 10px;
