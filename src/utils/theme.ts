@@ -8,6 +8,7 @@ declare module 'styled-components' {
       main: string;
       lightGrey: string;
       whiteColor: string;
+      darkBlue: string;
     };
     spacing: {
       tiny: number;
@@ -24,6 +25,7 @@ export const theme: DefaultTheme = {
     main: 'rgb(0, 136, 102)',
     lightGrey: 'rgb(162, 162, 162)',
     whiteColor: '#F0F3F5',
+    darkBlue: '#3C4560',
   },
   spacing: {
     large: 30,
