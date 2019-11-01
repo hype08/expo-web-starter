@@ -1,9 +1,9 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components/native';
+import { ThemeProvider } from 'styled-components/native';
 import { ApolloProvider } from 'react-apollo';
 import ApolloClient, { gql } from 'apollo-boost';
 import { theme } from './src/utils/theme';
-import Card from './src/components/Card';
+import AppNavigator from './src/navigation/AppNavigator';
 
 const client = new ApolloClient({ uri: 'http://localhost:4000' });
 
@@ -22,23 +22,10 @@ const App: React.FC = () => {
   return (
     <ApolloProvider client={client}>
       <ThemeProvider theme={theme}>
-        <Container>
-          <Card title="hello" />
-        </Container>
+        <AppNavigator />
       </ThemeProvider>
     </ApolloProvider>
   );
 };
 
 export default App;
-
-const Container = styled.View`
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  background-color: ${theme.colors.whiteColor};
-`;
-
-const Text = styled.Text`
-  color: ${theme.colors.lightGrey};
-`;
