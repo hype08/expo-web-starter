@@ -1,39 +1,32 @@
 import * as React from 'react';
 import styled from 'styled-components/native';
 import { Ionicons } from '@expo/vector-icons';
+import { useNavigation, useNavigationState } from 'react-navigation-hooks';
 import Card from '../components/Card';
 import { theme } from '../utils/theme';
 
 const HomeScreen: React.FC = () => {
+  const { navigate } = useNavigation();
+  const { routeName } = useNavigationState();
+
   return (
     <Container>
-      <Card title="HomeScreen" />
+      <Text>{routeName}</Text>
+      <Card />
       <RightTouch
+        onPress={(): boolean => navigate('Details')}
         style={{
           position: 'absolute',
           top: 600,
-          left: '40%',
+          left: '50%',
           marginLeft: -22,
           zIndex: 1,
         }}
       >
-        <Nav>
-          <Icon name="ios-arrow-back" size={20} color="#546bfb" />
-        </Nav>
-      </RightTouch>
-      <LeftTouch
-        style={{
-          position: 'absolute',
-          top: 600,
-          left: '60%',
-          marginLeft: -22,
-          zIndex: 1,
-        }}
-      >
-        <Nav>
+        <NavButton>
           <Icon name="ios-arrow-forward" size={20} color="#546bfb" />
-        </Nav>
-      </LeftTouch>
+        </NavButton>
+      </RightTouch>
     </Container>
   );
 };
@@ -49,15 +42,13 @@ const Container = styled.View`
 
 const Icon = styled(Ionicons)``;
 
-const LeftTouch = styled.TouchableOpacity`
+const RightTouch = styled.TouchableOpacity`
   position: absolute;
   top: 560;
   z-index: 1;
 `;
 
-const RightTouch = styled(LeftTouch)``;
-
-const Nav = styled.View`
+const NavButton = styled.View`
   width: 44px;
   height: 44px;
   border-radius: 22px;
@@ -66,3 +57,5 @@ const Nav = styled.View`
   align-items: center;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 `;
+
+const Text = styled.Text``;
