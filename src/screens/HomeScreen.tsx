@@ -11,8 +11,21 @@ const HomeScreen: React.FC = () => {
       <RightTouch
         style={{
           position: 'absolute',
-          top: 120,
-          left: '50%',
+          top: 600,
+          left: '40%',
+          marginLeft: -22,
+          zIndex: 1,
+        }}
+      >
+        <Nav>
+          <Icon name="ios-arrow-back" size={20} color="#546bfb" />
+        </Nav>
+      </RightTouch>
+      <LeftTouch
+        style={{
+          position: 'absolute',
+          top: 600,
+          left: '60%',
           marginLeft: -22,
           zIndex: 1,
         }}
@@ -20,7 +33,7 @@ const HomeScreen: React.FC = () => {
         <Nav>
           <Icon name="ios-arrow-forward" size={20} color="#546bfb" />
         </Nav>
-      </RightTouch>
+      </LeftTouch>
     </Container>
   );
 };
@@ -45,7 +58,6 @@ const LeftTouch = styled.TouchableOpacity`
 const RightTouch = styled(LeftTouch)``;
 
 const Nav = styled.View`
-  margin: 10px;
   width: 44px;
   height: 44px;
   border-radius: 22px;
