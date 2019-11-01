@@ -5,7 +5,6 @@ import { DefaultTheme } from 'styled-components/native';
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
-      main: string;
       lightGrey: string;
       whiteColor: string;
       darkBlue: string;
@@ -22,7 +21,6 @@ declare module 'styled-components' {
 // Export theme implementing interface
 export const theme: DefaultTheme = {
   colors: {
-    main: 'rgb(0, 136, 102)',
     lightGrey: 'rgb(162, 162, 162)',
     whiteColor: '#F0F3F5',
     darkBlue: '#3C4560',

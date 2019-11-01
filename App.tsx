@@ -22,9 +22,9 @@ const App: React.FC = () => {
   return (
     <ApolloProvider client={client}>
       <ThemeProvider theme={theme}>
-        <AppContainer>
-          <Card title="text" />
-        </AppContainer>
+        <Container>
+          <Card title="hello" />
+        </Container>
       </ThemeProvider>
     </ApolloProvider>
   );
@@ -32,9 +32,13 @@ const App: React.FC = () => {
 
 export default App;
 
-const AppContainer = styled.View`
+const Container = styled.View`
   flex: 1;
   align-items: center;
   justify-content: center;
   background-color: ${theme.colors.whiteColor};
+`;
+
+const Text = styled.Text`
+  color: ${theme.colors.lightGrey};
 `;
