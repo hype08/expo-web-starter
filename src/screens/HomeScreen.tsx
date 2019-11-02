@@ -2,8 +2,8 @@ import * as React from 'react';
 import styled from 'styled-components/native';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/core';
-import Card from '../components/Card';
 import { theme } from '../utils/theme';
+import Card from '../components/Card';
 
 const HomeScreen: React.FC = () => {
   const navigation = useNavigation();
