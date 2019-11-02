@@ -17,7 +17,7 @@ const HomeScreen: React.FC = () => {
         onPress={(): boolean => navigate('Details')}
         style={{
           position: 'absolute',
-          top: 600,
+          top: 650,
           left: '50%',
           marginLeft: -22,
           zIndex: 1,
