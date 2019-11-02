@@ -1,20 +1,18 @@
 import * as React from 'react';
 import styled from 'styled-components/native';
 import { Ionicons } from '@expo/vector-icons';
-import { useNavigation, useNavigationState } from 'react-navigation-hooks';
+import { useNavigation } from '@react-navigation/core';
 import Card from '../components/Card';
 import { theme } from '../utils/theme';
 
 const DetailsScreen: React.FC = () => {
-  const { navigate } = useNavigation();
-  const { routeName } = useNavigationState();
+  const navigation = useNavigation();
 
   return (
     <Container>
-      <Text>{routeName}</Text>
       <Card />
       <LeftTouch
-        onPress={(): boolean => navigate('Home')}
+        onPress={(): void => navigation.navigate('Home')}
         style={{
           position: 'absolute',
           top: 650,
@@ -57,5 +55,3 @@ const NavButton = styled.View`
   align-items: center;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 `;
-
-const Text = styled.Text``;
