@@ -28,7 +28,7 @@ const App: React.FC = () => {
     <ApolloProvider client={client}>
       <ThemeProvider theme={theme} />
       <NavigationNativeContainer>
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName="Home">
           <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Overview' }} />
           <Stack.Screen name="Details" component={DetailsScreen} />
         </Stack.Navigator>
