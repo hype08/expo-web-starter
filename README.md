@@ -7,7 +7,7 @@ This is a boilerplate for React Native Expo .
 #### Tech Stack
 
 - [Expo](https://expo.io/) @35.0.0
-- [React Navigation](https://reactnavigation.org/docs/en/getting-started.html) @4.0.10
+- [React Navigation](https://reactnavigation.org/docs/en/next/getting-started.html) @5.0.10
 
 - [Styled Components](https://www.styled-components.com/docs/basics#react-native) @5.0.0-beta.8
 - [Typescript](https://www.typescriptlang.org/) @3.6.4
